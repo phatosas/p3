@@ -18,3 +18,8 @@ Route::group(['middleware' => ['web']], function () {
     });
 
 });
+
+Route::get('/lorem-ipsum', 'P3Controller@getIndexLoremIpsum');
+Route::get('/user-generator', 'P3Controller@getIndexUserGenerator');
+Route::get('/xkcd-generator', 'P3Controller@getIndexXkcdGenerator');
+Route::post('/rates', 'P3Controller@postIndex');
