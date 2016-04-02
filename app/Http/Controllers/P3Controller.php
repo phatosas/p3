@@ -20,8 +20,28 @@ class P3Controller extends Controller
     {
         return view('xkcd-generator.index');
     }
-    public function postIndex()
+    public function postIndexLoremIpsum(Request $request)
     {
-        return 'Process the rate index';
+		$this->validate($request, [
+		'paragraphs' => 'required|numeric|max:99', 
+		]);
+		
+        return 'Generate Lorem Ipsum';
+    }
+    public function postIndexUserGenerator(Request $request)
+    {
+		$this->validate($request, [
+		'users' => 'required|numeric|max:99', 
+		]);
+		//dd($request->all());
+        return 'Generate Users';
+    }
+    public function postIndexXkcdGenerator(Request $request)
+    {
+		$this->validate($request, [
+		'words' => 'required|numeric|max:9', 
+		]);
+		dd($request->all());
+        return 'Generate Xkcd passwords';
     }
 }

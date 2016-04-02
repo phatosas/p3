@@ -12,14 +12,14 @@
 */
 
 Route::group(['middleware' => ['web']], function () {
-
-    Route::get('/', function () {
-        return view('welcome');
+	Route::get('/lorem-ipsum', 'P3Controller@getIndexLoremIpsum');
+	Route::get('/user-generator', 'P3Controller@getIndexUserGenerator');
+	Route::get('/xkcd-generator', 'P3Controller@getIndexXkcdGenerator');
+	Route::post('/lorem-ipsum', 'P3Controller@postIndexLoremIpsum');
+	Route::post('/user-generator', 'P3Controller@postIndexUserGenerator');
+	Route::post('/xkcd-generator', 'P3Controller@postIndexXkcdGenerator');
+    Route::post('/', function () { return view('welcome');
     });
-
 });
 
-Route::get('/lorem-ipsum', 'P3Controller@getIndexLoremIpsum');
-Route::get('/user-generator', 'P3Controller@getIndexUserGenerator');
-Route::get('/xkcd-generator', 'P3Controller@getIndexXkcdGenerator');
-Route::post('/rates', 'P3Controller@postIndex');
+

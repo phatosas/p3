@@ -2,7 +2,7 @@
 
 
 @section('title')
-   Lorem-Ipsum
+   Lorem Ipsum Generator
 @stop
 
 
@@ -17,7 +17,31 @@ such as a page specific stylesheets.
 
 
 @section('content')
-	<h1>Lorem-Ipsum</h1>
+	<a href='/'>&larr; Home</a>
+	
+	<h1>Lorem Ipsum Generator</h1>
+	
+	<form method='POST' action='/lorem-ipsum'>
+		
+		<input type='hidden' name='_token' value='{{ csrf_token() }}'>
+	
+		<p>How many paragraphs do you want?</p>
+		Paragraphs: <input type='text' name='paragraphs'> (Max: 99)
+		
+		<br><br>
+		
+		@if(count($errors) > 0)
+		<ul>
+			@foreach ($errors->all() as $error)
+				<li>{{ $error }}</li>
+			@endforeach
+		</ul>
+		@endif	
+
+		
+		<input type='submit' value='Generate'>
+	
+	</form>
 
 @stop
 
