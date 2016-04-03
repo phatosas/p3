@@ -30,12 +30,7 @@ such as a page specific stylesheets.
 		<br>
 		<input name="number" type="checkbox"> <label for="number">Number</label><br>
 		
-		<input name="symbol" type="checkbox"> <label for="symbol">Symbol</label><br>
-		
-		<p>Select a Delimeter</p>	
-		<input type="radio" name="delimeter" value="space" checked> Space<br>
-		<input type="radio" name="delimeter" value="camelcase"> CamelCase<br>
-		<input type="radio" name="delimeter" value="hyphens"> Hyphens<br>
+		<input name="sym" type="checkbox"> <label for="sym">Symbol</label><br>
 		
 		@if(count($errors) > 0)
 		<ul>
@@ -45,8 +40,15 @@ such as a page specific stylesheets.
 		</ul>
 		@endif
 		
-		<input type='submit' value='Generate'>  
+		<input type='submit' value='Generate'> 
+
     </form>
+	
+	<h2>The Comic that Inspired This Tool</h2>
+    <img 
+	src='http://imgs.xkcd.com/comics/password_strength.png'
+    style='width:700px'	
+	alt='xkcd comic'>
 
 @stop
 

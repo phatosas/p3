@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 
 use p3\Http\Requests;
 
+use \Kieranajp\Generator\Generator;
+
 class P3Controller extends Controller
 {
     public function getIndexLoremIpsum()
@@ -39,9 +41,26 @@ class P3Controller extends Controller
     public function postIndexXkcdGenerator(Request $request)
     {
 		$this->validate($request, [
-		'words' => 'required|numeric|max:9', 
+		'words' => 'required|numeric|min:1|max:9', 
 		]);
-		dd($request->all());
-        return 'Generate Xkcd passwords';
+		//dd($request->all());
+
+        $g = new Generator();
+		$password = array('word');
+		$i = 1;
+		
+		while ($i < intval($request["words"])){
+			array_push($password, 'word');
+			$i++;
+		}
+		if ($request["number"] == "on"){
+			array_push($password, 'num');
+		}
+		if ($request["sym"] == "on"){
+			array_push($password, 'symbol');
+		}
+		$g->setFormat($password);
+
+		return $g->generate();
     }
 }
