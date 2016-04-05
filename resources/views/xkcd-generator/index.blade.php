@@ -17,7 +17,10 @@ such as a page specific stylesheets.
 
 
 @section('content')
+	<a href='/'>&larr; Home</a>
+	
 	<h1>Xkcd Generator</h1>
+
 	<form method='POST' action='/xkcd-generator'>
 		
 		<input type='hidden' name='_token' value='{{ csrf_token() }}'>
@@ -43,6 +46,10 @@ such as a page specific stylesheets.
 		<input type='submit' value='Generate'> 
 
     </form>
+	
+	@if(isset($password))
+		<p> The password is: {{ $password }} </p>
+	@endif
 	
 	<h2>The Comic that Inspired This Tool</h2>
     <img 

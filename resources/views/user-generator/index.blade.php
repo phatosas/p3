@@ -11,6 +11,7 @@ This `head` section will be yielded right before the closing </head> tag.
 Use it to add specific things that *this* View needs in the head,
 such as a page specific stylesheets.
 --}}
+
 @section('head')
 
 @stop
@@ -42,7 +43,12 @@ such as a page specific stylesheets.
 		
 		<input type='submit' value='Generate'>  
     </form>
-
+	@if(isset($user))
+		@foreach($user as $my_users)
+			{{ $my_users }}
+			<br>
+		@endforeach
+	@endif
 @stop
 
 

@@ -6,7 +6,11 @@ use Illuminate\Http\Request;
 
 use p3\Http\Requests;
 
-use \Kieranajp\Generator\Generator;
+use \Kieranajp\Generator;
+
+use \Badcow\LoremIpsum;
+
+use Faker\Factory as Faker;
 
 class P3Controller extends Controller
 {
@@ -28,7 +32,14 @@ class P3Controller extends Controller
 		'paragraphs' => 'required|numeric|max:99', 
 		]);
 		
-        return 'Generate Lorem Ipsum';
+		$data = $request->all();
+		
+        $generator = new LoremIpsum\Generator();
+		
+		$paragraphs = $generator->getParagraphs($data["paragraphs"]);
+		
+		return view('lorem-ipsum.index')->with('paragraph', $paragraphs);
+		
     }
     public function postIndexUserGenerator(Request $request)
     {
@@ -36,31 +47,52 @@ class P3Controller extends Controller
 		'users' => 'required|numeric|max:99', 
 		]);
 		//dd($request->all());
-        return 'Generate Users';
+		$faker = Faker::create();
+		
+		$my_users = array('users');
+		$i = 0;
+		
+		while ($i < intval($request["users"])){
+			array_push($my_users, $faker->name);
+			if ($request["birthdate"] == "on"){
+				array_push($my_users, $faker->date);
+			}
+			if ($request["profile"] == "on"){
+				array_push($my_users, $faker->phoneNumber);
+				array_push($my_users, $faker->address);
+				array_push($my_users, $faker->email);
+				array_push($my_users, $faker->text);
+			}
+			array_push($my_users, "\n");
+			$i++;
+		}
+		return view('user-generator.index')->with(['user' => $my_users]);
+		
     }
     public function postIndexXkcdGenerator(Request $request)
     {
 		$this->validate($request, [
 		'words' => 'required|numeric|min:1|max:9', 
 		]);
-		//dd($request->all());
 
-        $g = new Generator();
-		$password = array('word');
+        $g = new Generator\Generator();
+		$my_password = array('word');
 		$i = 1;
 		
 		while ($i < intval($request["words"])){
-			array_push($password, 'word');
+			array_push($my_password, 'word');
 			$i++;
 		}
 		if ($request["number"] == "on"){
-			array_push($password, 'num');
+			array_push($my_password, 'num');
 		}
 		if ($request["sym"] == "on"){
-			array_push($password, 'symbol');
+			array_push($my_password, 'symbol');
 		}
-		$g->setFormat($password);
+		$g->setFormat($my_password);
 
-		return $g->generate();
+		$password = $g->generate();
+		
+		return view('xkcd-generator.index')->with('password', $password);
     }
 }

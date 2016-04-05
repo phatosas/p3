@@ -40,6 +40,10 @@ such as a page specific stylesheets.
 
 		
 		<input type='submit' value='Generate'>
+		
+		@if(isset($paragraph))
+			<p><?php echo implode('<p>', $paragraph); ?> </p>
+		@endif
 	
 	</form>
 
