@@ -54,7 +54,7 @@ such as a page specific stylesheets.
 	<h2>The Comic that Inspired This Tool</h2>
     <img 
 	src='http://imgs.xkcd.com/comics/password_strength.png'
-    style='width:700px'	
+    style='width:745px'	
 	alt='xkcd comic'>
 
 @stop
