@@ -1,27 +1,34 @@
-# Laravel PHP Framework
+# Developers Best Friend
 
-[![Build Status](https://travis-ci.org/laravel/framework.svg)](https://travis-ci.org/laravel/framework)
-[![Total Downloads](https://poser.pugx.org/laravel/framework/d/total.svg)](https://packagist.org/packages/laravel/framework)
-[![Latest Stable Version](https://poser.pugx.org/laravel/framework/v/stable.svg)](https://packagist.org/packages/laravel/framework)
-[![Latest Unstable Version](https://poser.pugx.org/laravel/framework/v/unstable.svg)](https://packagist.org/packages/laravel/framework)
-[![License](https://poser.pugx.org/laravel/framework/license.svg)](https://packagist.org/packages/laravel/framework)
+## Description
+Links to various applications that can be used by a web developer.
+The laravel framework was used to build the main page and the links to the applications on the main page.
+The applications take advantage of the lavavel framework by using applications that have been previously developed
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable, creative experience to be truly fulfilling. Laravel attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as authentication, routing, sessions, queueing, and caching.
+## Lorem Ipsum Generarator
+Lorem ipsum generator creates text that is giberrish. However the text generated can used to demonstrate the graphic properties of a document
+The application is dependent on the laravel application framework Badcow/LoremIpsum. There is the option to pick up to 99 paragraphs to display
 
-Laravel is accessible, yet powerful, providing tools needed for large, robust applications. A superb inversion of control container, expressive migration system, and tightly integrated unit testing support give you the tools you need to build any application with which you are tasked.
+## Random User Generator
+Random user generator creates random user profiles that can be used as dummy profiles by a developer
+The application is dependent of the laravel application fzaninotto/Faker. 
+The user can select not only the name but also the birthdate and a profile wich includes an address, phone number.
 
-## Official Documentation
 
-Documentation for the framework can be found on the [Laravel website](http://laravel.com/docs).
+## Xkcd Password Generator
+Xkcd password generator creates an xkcd password but using common words that are easy to remember but have a high degree of difficulty to dechiper.
+The laravel application used for this project uses common names to create the password.
+The additonal options are selecting a number which appends a randon number at the end of the password and selecting a symbol which adds a symbol to the password.
 
-## Contributing
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](http://laravel.com/docs/contributions).
+## Live URL
 
-## Security Vulnerabilities
+<http://p3.osaslog.com>
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell at taylor@laravel.com. All security vulnerabilities will be promptly addressed.
+link to project also found on
+<http://p1.osaslog.com>
 
-## License
+## Demo
+<http://screencast.com/t/MAR8Vdr4B>
 
-The Laravel framework is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT).
+# p3

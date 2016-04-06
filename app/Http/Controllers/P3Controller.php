@@ -60,7 +60,6 @@ class P3Controller extends Controller
 			if ($request["profile"] == "on"){
 				array_push($my_users, $faker->phoneNumber);
 				array_push($my_users, $faker->address);
-				array_push($my_users, $faker->email);
 				array_push($my_users, $faker->text);
 			}
 			array_push($my_users, "\n");

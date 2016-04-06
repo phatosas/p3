@@ -1,0 +1,12 @@
+body { 
+	margin-left: 21.5%;
+	margin-right: 21.5%;	
+	border: 3px dotted blue;
+	padding: 10px 10px 10px 10px;
+	}
+
+div {
+	border-radius: 25px;
+	padding: 5px;
+	margin: 5px;
+}

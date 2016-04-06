@@ -18,7 +18,10 @@ such as a page specific stylesheets.
 
 
 @section('content')
+	<a href='/'>&larr; Home</a>
+	
 	<h1>User-Generator</h1>
+	
 	<form method='POST' action='/user-generator'>
 		
 		<input type='hidden' name='_token' value='{{ csrf_token() }}'>

@@ -5,6 +5,14 @@
         {{-- Yield the title if it exists, otherwise default to 'Foobooks' --}}
         @yield('title','p3')
     </title>
+	
+	<header>
+        <img
+        src='http://www.freewebheaders.com/wordpress/wp-content/gallery/liquids-headers/crude-oil-splash-on-yellow-background-header.jpg'
+        style='width:745px'
+        alt='p3 Logo'>
+    </header>
+
 
     <meta charset='utf-8'>
     <link href="/css/p3.css" type='text/css' rel='stylesheet'>
@@ -15,16 +23,10 @@
 	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
 	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-
+	<link rel='stylesheet' href='/css/style.css'>
 </head>
 <body>
 
-    <header>
-        <img
-        src='http://www.freewebheaders.com/wordpress/wp-content/gallery/liquids-headers/crude-oil-splash-on-yellow-background-header.jpg'
-        style='width:700px'
-        alt='p3 Logo'>
-    </header>
 
     <section>
         {{-- Main page content will be yielded here --}}
