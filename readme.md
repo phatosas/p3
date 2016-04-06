@@ -2,9 +2,9 @@
 
 ## Description
 Links to various applications that can be used by a web developer.
-The laravel framework was used to build the main page and the links to the applications on the main page.
+The laravel framework was used to build the main page and the web applications linked to the main page.
 The applications take advantage of the lavavel framework by using Packages that have been previously developed
-The web applications also provide user validation on the client side.
+The web applications also provide server side validation.
 
 ## Lorem Ipsum Generarator
 Lorem ipsum generator creates text that is giberrish. However the text generated can used to demonstrate the graphic properties of a document
